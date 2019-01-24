@@ -1,0 +1,27 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: feign
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://rm-m5e2p875dww1c6f30o.mysql.rds.aliyuncs.com:3306/spider
+    username: gocheck_root
+    password: tongyuan2512#
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+ribbon:
+  eureka:
+    enabled: true
+feign:
+  hystrix:
+    enabled: true
+logging:
+  level:
+    org.feign.check.mapper: debug  
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+
+  
